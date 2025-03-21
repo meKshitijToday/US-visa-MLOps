@@ -14,6 +14,6 @@ os.makedirs(log_dir,exist_ok=True)
 logging.basicConfig(filename=logs_path, 
                     level=logging.DEBUG, 
                     format='[ %(asctime)s ] - %(name)s - %(levelname)s - %(message)s'
-                    )
+                    )           # format of log
 
 # asctime is ASCII time, name is name of logger, levelname is level of logging, message is message to be logged
