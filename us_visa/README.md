@@ -10,6 +10,7 @@ Output of Model_Evaluation is sent to Model_Pusher
 config_entity will manipulate constants; 
 
 Data ingestion -  
+## Workflow - 
 1) constants - us_visa/constants folder has __init.py__ constructor file 
 2) entity - us_visa/config_entity (to manipulate us_visa/constants)
 3) components
@@ -26,3 +27,12 @@ Set 'export MONGODB_URL="mongodb+srv://kshitijdegg:Welcome%402021@cluster0.u3wbf
                 | - test.csv
             - feature_store-
                 | - usvisa.csv
+
+
+DataValidation - 
+## Workflow - 
+1) constants - us_visa/constants folder has __init.py__ constructor file 
+2) entity - us_visa/config_entity (to manipulate us_visa/constants)
+3) components
+4) pipeline
+5) Main file

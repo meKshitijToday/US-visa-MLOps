@@ -9,18 +9,17 @@ from pandas import DataFrame
 from us_visa.exception import USvisaException
 from us_visa.logger import logging
 
-def write_yaml_file(file_path:str)->dict:
+def write_yaml_file(file_path: str, content: object, replace: bool = False) -> None:
     try:
         if replace:
             if os.path.exists(file_path):
                 os.remove(file_path)
-        os.makedirs(os.path.dirname(file_path),exist_ok=True)
-        with open(file_path,'w') as file:
-            yaml.dump(data,file)
-    except Exception as e:        
-        logging.error(e)
-        raise USvisaException(e,sys) from e
-
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, "w") as file:
+            yaml.dump(content, file)
+    except Exception as e:
+        raise USvisaException(e, sys) from e
+   
 def read_yaml_file(file_path:str)->dict:
     try:
         with open(file_path,'rb') as yaml_file:
